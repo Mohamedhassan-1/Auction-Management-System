@@ -1,0 +1,26 @@
+Create Table Customer
+(CustomerID number(10)  primary key ,CustomerName varchar2(20) not null,
+CustomerEmail varchar2(20) unique not null , CustomerPassword varchar2(10) not null ,
+CustomerGender varchar2 (1));
+Create table PCategory
+(CategoryID number(3) unique, CategoryName varchar2 (20) primary key);
+Create table Product
+(ProductID number(3) primary key,
+Category_name varchar2 (20) REFERENCES PCategory (CategoryName),
+ProductName varchar2 (20),MinPrice number(10),MaxPrice number(10),
+ProductDescription varchar2 (200) not null);
+Create table Message
+(MessageID number(3) REFERENCES Customer (CustomerID),
+MessageContent varchar2 (200) not null);
+Create table Request
+(RequestID number(3) REFERENCES Customer (CustomerID),
+RequestContent varchar2 (200) not null,RequestStatue varchar2 (1));
+
+
+
+insert into customer values(1,'Admin','Admin@Auction.com',0000,'M')
+insert into pcategory values(1,'phones')
+insert into pcategory values(2,'Cars')
+insert into pcategory values(3,'Homes')
+insert into pcategory values(4,'Electric')
+select customerid  from customer where customeremail='aa' and customerpassword='a'

@@ -1,0 +1,12 @@
+E:\Third Year\second term\SW\Auction Management System\Auction Management System\obj\Debug\Auction Management System.csproj.AssemblyReference.cache
+E:\Third Year\second term\SW\Auction Management System\Auction Management System\obj\Debug\Auction_Management_System.Form1.resources
+E:\Third Year\second term\SW\Auction Management System\Auction Management System\obj\Debug\Auction_Management_System.Properties.Resources.resources
+E:\Third Year\second term\SW\Auction Management System\Auction Management System\obj\Debug\Auction Management System.csproj.GenerateResource.cache
+E:\Third Year\second term\SW\Auction Management System\Auction Management System\obj\Debug\Auction Management System.csproj.CoreCompileInputs.cache
+E:\Third Year\second term\SW\Auction Management System\Auction Management System\bin\Debug\Auction Management System.exe.config
+E:\Third Year\second term\SW\Auction Management System\Auction Management System\bin\Debug\Auction Management System.exe
+E:\Third Year\second term\SW\Auction Management System\Auction Management System\bin\Debug\Auction Management System.pdb
+E:\Third Year\second term\SW\Auction Management System\Auction Management System\bin\Debug\Oracle.DataAccess.dll
+E:\Third Year\second term\SW\Auction Management System\Auction Management System\obj\Debug\Auction Management System.csproj.CopyComplete
+E:\Third Year\second term\SW\Auction Management System\Auction Management System\obj\Debug\Auction Management System.exe
+E:\Third Year\second term\SW\Auction Management System\Auction Management System\obj\Debug\Auction Management System.pdb

@@ -24,3 +24,24 @@ insert into pcategory values(2,'Cars')
 insert into pcategory values(3,'Homes')
 insert into pcategory values(4,'Electric')
 select customerid  from customer where customeremail='aa' and customerpassword='a'
+
+
+create or replace PROCEDURE GetCusID 
+(CID out NUMBER)
+as
+begin
+SELECT MAX(customerid)
+into CID
+from customer;
+end;
+
+
+create or replace
+PROCEDURE setinfoDetails
+(
+ Cid number,Cname varchar2,email varchar2,pass varchar2,gender varchar2
+)
+as
+begin 
+insert into customer values(Cid,Cname,email,pass,gender);
+end;

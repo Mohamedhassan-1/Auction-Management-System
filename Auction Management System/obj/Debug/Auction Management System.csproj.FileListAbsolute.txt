@@ -10,3 +10,13 @@ E:\Third Year\second term\SW\Auction Management System\Auction Management System
 E:\Third Year\second term\SW\Auction Management System\Auction Management System\obj\Debug\Auction Management System.csproj.CopyComplete
 E:\Third Year\second term\SW\Auction Management System\Auction Management System\obj\Debug\Auction Management System.exe
 E:\Third Year\second term\SW\Auction Management System\Auction Management System\obj\Debug\Auction Management System.pdb
+D:\3rd year\2nd term\SWEngineering\Project_Git\Auction Management System\bin\Debug\Auction Management System.exe.config
+D:\3rd year\2nd term\SWEngineering\Project_Git\Auction Management System\bin\Debug\Auction Management System.exe
+D:\3rd year\2nd term\SWEngineering\Project_Git\Auction Management System\bin\Debug\Auction Management System.pdb
+D:\3rd year\2nd term\SWEngineering\Project_Git\Auction Management System\obj\Debug\Auction_Management_System.Form1.resources
+D:\3rd year\2nd term\SWEngineering\Project_Git\Auction Management System\obj\Debug\Auction_Management_System.Properties.Resources.resources
+D:\3rd year\2nd term\SWEngineering\Project_Git\Auction Management System\obj\Debug\Auction_Management_System.Register.resources
+D:\3rd year\2nd term\SWEngineering\Project_Git\Auction Management System\obj\Debug\Auction_Management_System.RJTextBox.resources
+D:\3rd year\2nd term\SWEngineering\Project_Git\Auction Management System\obj\Debug\Auction Management System.csproj.GenerateResource.cache
+D:\3rd year\2nd term\SWEngineering\Project_Git\Auction Management System\obj\Debug\Auction Management System.exe
+D:\3rd year\2nd term\SWEngineering\Project_Git\Auction Management System\obj\Debug\Auction Management System.pdb

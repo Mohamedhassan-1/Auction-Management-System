@@ -11,50 +11,55 @@ using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
 namespace Auction_Management_System
 {
-    
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
         string ordb = "Data Source=orcl; User Id=hr;Password=hr;";
         OracleConnection conn;
-        public Form1()
+
+        public Home()
         {
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void messagebox_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void logout_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            Form1 log = new Form1();
+            log.Show();
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+        private void HomeLoad(object sender, EventArgs e)
         {
             conn = new OracleConnection(ordb);
             conn.Open();
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select customerid  from customer where customeremail=:email and customerpassword=:password";
+            cmd.CommandText = "select messagecontent  from message,customer where messageid=customerid";
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add("email", EmailText.Text);
-            cmd.Parameters.Add("password", PasswordText.Text);
             OracleDataReader dataReader = cmd.ExecuteReader();
-            if (dataReader.Read())
+            while (dataReader.Read())
             {
-                this.Hide();
-                Home home = new Home();
-                home.Show();
+                messagecontent.Text += dataReader[0].ToString();
+                messagecontent.Text += Environment.NewLine;
+
             }
+            dataReader.Close();
+            
         }
 
-        private void RegisterButton_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Register reg = new Register();
-            this.Hide();
-            reg.Show();
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

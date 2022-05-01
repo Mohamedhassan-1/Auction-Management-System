@@ -1,3 +1,9 @@
+drop table Customer;
+drop table PCategory;
+drop table Product;
+drop table Message;
+drop table Request;
+
 Create Table Customer
 (CustomerID number(10)  primary key ,CustomerName varchar2(20) not null,
 CustomerEmail varchar2(20) unique not null , CustomerPassword varchar2(10) not null ,
@@ -18,12 +24,13 @@ RequestContent varchar2 (200) not null,RequestStatue varchar2 (1));
 
 
 
-insert into customer values(1,'Admin','Admin@Auction.com',0000,'M')
-insert into pcategory values(1,'phones')
-insert into pcategory values(2,'Cars')
-insert into pcategory values(3,'Homes')
-insert into pcategory values(4,'Electric')
-select customerid  from customer where customeremail='aa' and customerpassword='a'
+insert into customer values(1,'Admin','Admin@Auction.com','0000','M');
+insert into pcategory values(1,'phones');
+insert into pcategory values(2,'Cars');
+insert into pcategory values(3,'Homes');
+insert into pcategory values(4,'Electric');
+insert into message values(1,'Welcome Admin');
+insert into message values(1,'Welcome Admin2');
 
 
 create or replace PROCEDURE GetCusID 

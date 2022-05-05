@@ -20,6 +20,7 @@ RequestContent varchar2 (200) not null,RequestStatue varchar2 (1));
 
 
 insert into customer values(1,'Admin','Admin@Auction.com','0000','M');
+insert into customer values(2,'Mohamed','Mohamed@Auction.com','123','M');
 insert into pcategory values(1,'phones');
 insert into pcategory values(2,'Cars');
 insert into pcategory values(3,'Homes');
@@ -47,3 +48,7 @@ as
 begin 
 insert into customer values(Cid,Cname,email,pass,gender);
 end;
+
+
+
+

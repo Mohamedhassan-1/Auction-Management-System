@@ -1,8 +1,3 @@
-drop table Customer;
-drop table PCategory;
-drop table Product;
-drop table Message;
-drop table Request;
 
 Create Table Customer
 (CustomerID number(10)  primary key ,CustomerName varchar2(20) not null,

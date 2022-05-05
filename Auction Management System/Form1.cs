@@ -44,8 +44,18 @@ namespace Auction_Management_System
             OracleDataReader dataReader = cmd.ExecuteReader();
             if (dataReader.Read())
             {
-                MessageBox.Show("Success");
+                this.Hide();
+                Home home = new Home(Convert.ToInt16(dataReader[0]));
+                home.Show();
+               
             }
+        }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            Register reg = new Register();
+            this.Hide();
+            reg.Show();
         }
     }
 }

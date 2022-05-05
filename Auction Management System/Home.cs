@@ -15,9 +15,10 @@ namespace Auction_Management_System
     {
         string ordb = "Data Source=orcl; User Id=hr;Password=hr;";
         OracleConnection conn;
-
-        public Home()
+        int customerId;
+        public Home(int customerid)
         {
+            customerId = customerid;
             InitializeComponent();
         }
 
@@ -39,16 +40,27 @@ namespace Auction_Management_System
             conn.Open();
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select messagecontent  from message,customer where messageid=customerid";
-            cmd.CommandType = CommandType.Text;
-            OracleDataReader dataReader = cmd.ExecuteReader();
-            while (dataReader.Read())
+            cmd.CommandText = "select messagecontent , messageid from message,customer where messageid=customerid";
+                    
+            try
             {
-                messagecontent.Text += dataReader[0].ToString();
-                messagecontent.Text += Environment.NewLine;
+                OracleDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    if (Convert.ToInt16(dataReader[1]) == customerId)
+                    {
+                        messagecontent.Text += dataReader[0].ToString();
+                        messagecontent.Text += Environment.NewLine;
+                    }
 
+                }
+                dataReader.Close();
             }
-            dataReader.Close();
+            catch(Exception ex)
+            {
+               
+            }
+            
             
         }
 

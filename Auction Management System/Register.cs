@@ -15,7 +15,7 @@ namespace Auction_Management_System
     public partial class Register : Form
     {
         OracleConnection con;
-        string ordb = "data source = orcl; user id =scott; password=tiger;";
+        string ordb = "Data Source=orcl; User Id=hr;Password=hr;";
         public Register()
         {
             InitializeComponent();
@@ -50,8 +50,14 @@ namespace Auction_Management_System
             c.Parameters.Add("Cemail", txt_Email.Texts);
             c.Parameters.Add("CPass", txt_Pass.Texts);
             c.Parameters.Add("Cgender", txt_Gender.Texts);
-            c.ExecuteNonQuery();
-            MessageBox.Show("rgistered sucessfully");
+           if( c.ExecuteNonQuery()!=-1)
+            {
+                MessageBox.Show("Registered sucessfully");
+                this.Hide();
+                Home home = new Home(newid);
+                home.Show();
+            }
+           
 
 
         }

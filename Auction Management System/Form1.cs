@@ -45,8 +45,9 @@ namespace Auction_Management_System
             if (dataReader.Read())
             {
                 this.Hide();
-                Home home = new Home();
+                Home home = new Home(Convert.ToInt16(dataReader[0]));
                 home.Show();
+               
             }
         }
 

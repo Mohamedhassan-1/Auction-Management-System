@@ -17,10 +17,13 @@ Create table Request
 (RequestID number(3) REFERENCES Customer (CustomerID),
 RequestContent varchar2 (200) not null,RequestStatue varchar2 (1));
 
+create  sequence id_seq
+start with 1 
+increment by 1
+MINVALUE 1;
 
-
-insert into customer values(1,'Admin','Admin@Auction.com','0000','M');
-insert into customer values(2,'Mohamed','Mohamed@Auction.com','123','M');
+insert into customer values(id_seq.nextval,'Admin','Admin@Auction.com','0000','M');
+insert into customer values(id_seq.nextval,'Mohamed','Mohamed@Auction.com','123','M');
 insert into pcategory values(1,'phones');
 insert into pcategory values(2,'Cars');
 insert into pcategory values(3,'Homes');
@@ -42,11 +45,11 @@ end;
 create or replace
 PROCEDURE setinfoDetails
 (
- Cid number,Cname varchar2,email varchar2,pass varchar2,gender varchar2
+ Cname varchar2,email varchar2,pass varchar2,gender varchar2
 )
 as
 begin 
-insert into customer values(Cid,Cname,email,pass,gender);
+insert into customer values(id_seq.nextval,Cname,email,pass,gender);
 end;
 
 
